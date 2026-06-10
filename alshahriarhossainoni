@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Al Shahriar Hossain Oni | Order Flow Trader</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Auction Room Bangladesh</title>
 
   <style>
     * {
@@ -15,59 +15,121 @@
 
     body {
       background: #050505;
-      color: #f5f5f5;
-      line-height: 1.6;
+      color: white;
     }
 
-    header {
-      min-height: 100vh;
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 8%;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      background: radial-gradient(circle at top, #2b2108, #050505 55%);
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid #2b2b2b;
+    }
+
+    nav h2 {
+      color: #d4af37;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 120px 8% 60px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 50px;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+        url("https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 58px;
+      line-height: 1.1;
       color: #d4af37;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    .hero h2 {
-      font-size: 24px;
-      color: #fff;
+    .hero h3 {
+      font-size: 26px;
       margin-bottom: 20px;
     }
 
     .hero p {
-      max-width: 750px;
-      margin: auto;
       color: #cfcfcf;
       font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
+      padding: 14px 30px;
       background: #d4af37;
       color: #000;
       text-decoration: none;
-      font-weight: bold;
       border-radius: 6px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #d4af37;
+      border: 1px solid #d4af37;
+    }
+
+    .profile-card {
+      background: rgba(17,17,17,0.9);
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid #d4af37;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(212,175,55,0.15);
+    }
+
+    .profile-card img {
+      width: 100%;
+      max-width: 330px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 2px solid #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .profile-card h2 {
+      color: #d4af37;
+      margin-bottom: 8px;
     }
 
     section {
-      padding: 70px 10%;
+      padding: 80px 8%;
     }
 
-    .title {
-      color: #d4af37;
-      font-size: 32px;
-      margin-bottom: 25px;
+    .section-title {
       text-align: center;
+      color: #d4af37;
+      font-size: 38px;
+      margin-bottom: 45px;
     }
 
     .grid {
@@ -77,179 +139,221 @@
     }
 
     .card {
-      background: #111;
-      border: 1px solid #2e2e2e;
-      padding: 25px;
-      border-radius: 12px;
+      background: linear-gradient(145deg, #111, #080808);
+      border: 1px solid #2b2b2b;
+      padding: 30px;
+      border-radius: 18px;
       transition: 0.3s;
     }
 
     .card:hover {
+      transform: translateY(-8px);
       border-color: #d4af37;
-      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(212,175,55,0.12);
     }
 
     .card h3 {
       color: #d4af37;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
+      font-size: 22px;
     }
 
-    .card p, li {
+    .card p, .card li {
       color: #cfcfcf;
+      line-height: 1.7;
     }
 
     ul {
       padding-left: 20px;
     }
 
-    .strategy-box {
-      background: linear-gradient(135deg, #111, #1f1805);
+    .strategy {
+      background: linear-gradient(135deg, #111, #211906);
       border-left: 5px solid #d4af37;
-      padding: 30px;
-      border-radius: 10px;
-      margin-top: 30px;
+      padding: 35px;
+      border-radius: 18px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .image-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .image-section img {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid #d4af37;
+    }
+
+    .contact {
+      text-align: center;
+      background: #080808;
     }
 
     footer {
+      padding: 25px;
       text-align: center;
-      padding: 30px;
-      background: #080808;
       color: #888;
       border-top: 1px solid #222;
+      background: #030303;
     }
 
-    .gold {
-      color: #d4af37;
+    @media(max-width: 850px) {
+      .hero, .image-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 8px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="hero">
-      <h1>Al Shahriar Hossain Oni</h1>
-      <h2>Auction Market Theory & Order Flow Trader</h2>
-      <p>
-        I trade using Auction Market Theory, Market Profile, TPO, Volume Profile,
-        Bookmap Heatmap, Liquidity, LVN, VAH, VAL, Delta, Absorption and Exhaustion.
-        My focus is not prediction — my focus is reading market behaviour.
-      </p>
-      <a href="#strategy" class="btn">Explore My Strategy</a>
+  <nav>
+    <h2>The Auction Room BD</h2>
+    <div>
+      <a href="#about">About</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
     </div>
-  </header>
+  </nav>
 
-  <section>
-    <h2 class="title">My Trading Foundation</h2>
+  <div class="hero">
+    <div>
+      <h1>Trade Like an Auction Reader</h1>
+      <h3>Auction Market Theory | Order Flow | Liquidity</h3>
+      <p>
+        I focus on reading market behavior using Volume Profile, TPO, Bookmap Heatmap,
+        Footprint Charts, Delta, LVN, VAH, VAL, Absorption and Liquidity.
+      </p>
+      <a href="#strategy" class="btn">My Strategy</a>
+      <a href="#contact" class="btn btn-outline">Join Community</a>
+    </div>
+
+    <div class="profile-card">
+      <img src="profile.jpg" alt="Al Shahriar Hossain Oni">
+      <h2>Al Shahriar Hossain Oni</h2>
+      <p>Founder of The Auction Room Bangladesh</p>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2 class="section-title">About My Trading</h2>
 
     <div class="grid">
       <div class="card">
         <h3>Auction Market Theory</h3>
-        <p>
-          I study how price auctions between value and imbalance.
-          Market moves from balance to imbalance, then searches for new value.
-        </p>
+        <p>I study how price moves between balance and imbalance while searching for fair value.</p>
       </div>
 
       <div class="card">
         <h3>Volume Profile</h3>
-        <p>
-          I focus on VAH, VAL, POC, HVN and LVN to understand where the market
-          accepts or rejects price.
-        </p>
+        <p>I use VAH, VAL, POC, HVN and LVN to identify acceptance, rejection and key auction zones.</p>
       </div>
 
       <div class="card">
         <h3>Order Flow</h3>
-        <p>
-          I use footprint, delta, cumulative delta, imbalance and exhaustion
-          to see buyer and seller aggression.
-        </p>
+        <p>I read delta, footprint imbalance, absorption, exhaustion and trapped traders.</p>
       </div>
 
       <div class="card">
-        <h3>Bookmap Heatmap</h3>
-        <p>
-          I watch liquidity, absorption, spoofing behaviour and liquidity reactions
-          before taking trades.
-        </p>
+        <h3>Heatmap Liquidity</h3>
+        <p>I use Bookmap to observe liquidity stacking, pulling, absorption and reaction zones.</p>
       </div>
     </div>
   </section>
 
   <section id="strategy">
-    <h2 class="title">My Trading Strategy</h2>
+    <h2 class="section-title">My Trading Strategy</h2>
 
-    <div class="strategy-box">
-      <h3 class="gold">Core Idea</h3>
+    <div class="strategy">
+      <h3 style="color:#d4af37; margin-bottom:15px;">Core Framework</h3>
       <p>
-        I do not blindly buy support or sell resistance. I wait for price to reach
-        important auction levels such as LVN, VAH, VAL, previous high/low, liquidity
-        zones or unfinished auction areas. Then I check order flow confirmation.
+        I do not trade random support and resistance. I wait for price to reach important auction
+        areas like LVN, VAH, VAL, POC, liquidity pools, previous highs/lows or unfinished auction zones.
+        Then I confirm with order flow and heatmap behavior.
       </p>
+
       <br>
 
-      <h3 class="gold">My Trade Checklist</h3>
       <ul>
-        <li>Is price trading near VAH, VAL, LVN, POC or liquidity zone?</li>
-        <li>Is the market accepting or rejecting this price?</li>
-        <li>Is heatmap liquidity pulling, stacking or absorbing?</li>
-        <li>Is delta supporting the move or showing divergence?</li>
-        <li>Is there exhaustion at the top or bottom?</li>
-        <li>Is there a clean risk area for stop loss?</li>
+        <li>Price near VAH, VAL, LVN, POC or liquidity zone</li>
+        <li>Clear rejection or acceptance from value area</li>
+        <li>Heatmap liquidity reaction or absorption</li>
+        <li>Delta confirmation or divergence</li>
+        <li>Exhaustion at top or bottom</li>
+        <li>Clean stop loss and risk management</li>
       </ul>
     </div>
   </section>
 
-  <section>
-    <h2 class="title">Markets I Focus On</h2>
+  <section class="image-section">
+    <div>
+      <h2 style="color:#d4af37; font-size:36px; margin-bottom:20px;">Institutional Style Analysis</h2>
+      <p style="color:#cfcfcf; line-height:1.8;">
+        My focus is understanding where big participants are active, where retail traders are trapped,
+        and where liquidity is likely to be targeted. Every trade must have a reason based on auction logic,
+        not emotion.
+      </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Trading Chart">
+  </section>
+
+  <section id="tools">
+    <h2 class="section-title">Tools I Use</h2>
 
     <div class="grid">
       <div class="card">
-        <h3>Gold / XAUUSD / GC</h3>
-        <p>
-          My main focus is gold because it reacts strongly around liquidity,
-          volume profile levels and macro fundamentals.
-        </p>
+        <h3>Bookmap</h3>
+        <p>Heatmap, liquidity, absorption and order book behavior.</p>
       </div>
 
       <div class="card">
-        <h3>Bitcoin</h3>
-        <p>
-          I observe BTC structure, liquidity runs and auction behaviour,
-          especially near major psychological levels.
-        </p>
+        <h3>MotiveWave</h3>
+        <p>Footprint chart, volume profile, delta and execution analysis.</p>
       </div>
 
       <div class="card">
-        <h3>Nasdaq & S&P</h3>
-        <p>
-          I use these markets to study risk sentiment, institutional order flow
-          and intraday momentum.
-        </p>
+        <h3>TPO / Market Profile</h3>
+        <p>Balance, imbalance, value migration and auction structure.</p>
+      </div>
+
+      <div class="card">
+        <h3>Risk Management</h3>
+        <p>Every setup must have defined risk before entry.</p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2 class="title">Trading Philosophy</h2>
-
-    <div class="strategy-box">
-      <p>
-        Trading is not about indicators. Trading is about understanding where
-        participants are trapped, where liquidity is resting, where value is accepted,
-        and where the market is likely to reprice.
-      </p>
-      <br>
-      <p>
-        My goal is to trade like a professional: patient, selective, risk-focused
-        and data-driven.
-      </p>
-    </div>
+  <section id="contact" class="contact">
+    <h2 class="section-title">Join The Auction Room Bangladesh</h2>
+    <p style="color:#cfcfcf; margin-bottom:25px;">
+      Learn Auction Market Theory, Order Flow, Liquidity and Professional Trading Concepts.
+    </p>
+    <a href="#" class="btn">Contact Me</a>
   </section>
 
   <footer>
-    <p>© 2026 Al Shahriar Hossain Oni | The Auction Room Bangladesh</p>
+    © 2026 The Auction Room Bangladesh | Al Shahriar Hossain Oni
   </footer>
 
 </body>
