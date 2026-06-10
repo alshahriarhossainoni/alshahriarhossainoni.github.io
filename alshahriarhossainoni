@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Shahriar Hossain Oni | Order Flow Trader</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #050505;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      background: radial-gradient(circle at top, #2b2108, #050505 55%);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      color: #cfcfcf;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #d4af37;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    section {
+      padding: 70px 10%;
+    }
+
+    .title {
+      color: #d4af37;
+      font-size: 32px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #2e2e2e;
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border-color: #d4af37;
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+    }
+
+    .card p, li {
+      color: #cfcfcf;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .strategy-box {
+      background: linear-gradient(135deg, #111, #1f1805);
+      border-left: 5px solid #d4af37;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #080808;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Al Shahriar Hossain Oni</h1>
+      <h2>Auction Market Theory & Order Flow Trader</h2>
+      <p>
+        I trade using Auction Market Theory, Market Profile, TPO, Volume Profile,
+        Bookmap Heatmap, Liquidity, LVN, VAH, VAL, Delta, Absorption and Exhaustion.
+        My focus is not prediction — my focus is reading market behaviour.
+      </p>
+      <a href="#strategy" class="btn">Explore My Strategy</a>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="title">My Trading Foundation</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Auction Market Theory</h3>
+        <p>
+          I study how price auctions between value and imbalance.
+          Market moves from balance to imbalance, then searches for new value.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Volume Profile</h3>
+        <p>
+          I focus on VAH, VAL, POC, HVN and LVN to understand where the market
+          accepts or rejects price.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Order Flow</h3>
+        <p>
+          I use footprint, delta, cumulative delta, imbalance and exhaustion
+          to see buyer and seller aggression.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Bookmap Heatmap</h3>
+        <p>
+          I watch liquidity, absorption, spoofing behaviour and liquidity reactions
+          before taking trades.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="strategy">
+    <h2 class="title">My Trading Strategy</h2>
+
+    <div class="strategy-box">
+      <h3 class="gold">Core Idea</h3>
+      <p>
+        I do not blindly buy support or sell resistance. I wait for price to reach
+        important auction levels such as LVN, VAH, VAL, previous high/low, liquidity
+        zones or unfinished auction areas. Then I check order flow confirmation.
+      </p>
+      <br>
+
+      <h3 class="gold">My Trade Checklist</h3>
+      <ul>
+        <li>Is price trading near VAH, VAL, LVN, POC or liquidity zone?</li>
+        <li>Is the market accepting or rejecting this price?</li>
+        <li>Is heatmap liquidity pulling, stacking or absorbing?</li>
+        <li>Is delta supporting the move or showing divergence?</li>
+        <li>Is there exhaustion at the top or bottom?</li>
+        <li>Is there a clean risk area for stop loss?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Markets I Focus On</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Gold / XAUUSD / GC</h3>
+        <p>
+          My main focus is gold because it reacts strongly around liquidity,
+          volume profile levels and macro fundamentals.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Bitcoin</h3>
+        <p>
+          I observe BTC structure, liquidity runs and auction behaviour,
+          especially near major psychological levels.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Nasdaq & S&P</h3>
+        <p>
+          I use these markets to study risk sentiment, institutional order flow
+          and intraday momentum.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Trading Philosophy</h2>
+
+    <div class="strategy-box">
+      <p>
+        Trading is not about indicators. Trading is about understanding where
+        participants are trapped, where liquidity is resting, where value is accepted,
+        and where the market is likely to reprice.
+      </p>
+      <br>
+      <p>
+        My goal is to trade like a professional: patient, selective, risk-focused
+        and data-driven.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Al Shahriar Hossain Oni | The Auction Room Bangladesh</p>
+  </footer>
+
+</body>
+</html>
